@@ -1,0 +1,34 @@
+//- html 
+//-     head 
+//-         title="Mi primera plantilla PUG"
+    
+//-     body 
+//-         h1=mensaje 
+
+
+
+html
+    head
+        title Productos
+    body
+        h1 Productos
+        if productos.length == 0
+            h2 No hay productos
+        else
+            table
+                thead
+                    th Title
+                    th Price
+                    th Thumbail
+                tbody
+
+                    each prod in productos
+                        tr
+                            td=prod.title
+                            td=prod.price 
+                            td
+                                img(src=prod.thumbail)
+                        tr
+        button
+            a(href="http://localhost:8080/") AGREGAR PRODUCTOS
+        
